@@ -471,9 +471,8 @@ footer .texts div ul .ic-mobile {
 }
 
 .is {
-  height: 100vh;
+  height: 100% !important;
   text-align: center;
-  background-size: cover;
   background-color: #fafaff;
 }
 
@@ -692,10 +691,12 @@ footer .texts div ul .ic-mobile {
     background-size: cover;
     height: 130vh;
   }
+  .is svg {
+    margin: 40px auto;
+  }
   .is .conteinerCompu {
-    -webkit-transform: scale(-2px);
-            transform: scale(-2px);
-    padding: 0 auto;
+    display: inline;
+    margin: 0 auto;
   }
   .centro-ayuda .busqueda h4 {
     font-size: 40px !important;
