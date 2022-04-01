@@ -1,0 +1,99 @@
+/*generales*/
+
+// variables 
+$size: 10px;
+$colores:
+#ff8ec6, 
+#cf4f87,
+#dd1070,
+#a00c4c,
+rgb(41, 181, 185),
+;
+
+// mixins 
+@mixin tamaño ($num, $num2) {
+    width: $num;
+    height: $num2;
+}
+
+@mixin espacios ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin sticky ($top) {
+    position: sticky;
+    top: $top;
+}
+
+@mixin h-text ($sizeH, $colorH) {
+    font-size: $size * $sizeH; 
+    text-align: center;
+    color: $colorH;
+}
+
+@mixin background ($d, $bgr) {
+    display: $d;
+    background-size: cover;
+    background-image: url($bgr);
+    background-repeat: no-repeat;
+}
+
+@mixin flex ($direction,$justify){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@mixin animaciones ($name, $duration){
+    animation-name: $name ;
+    animation-duration: $duration;
+}
+
+// extensiones 
+%text-decoration {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+}
+
+%box-shadow {
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+
+
+// keyframes
+@keyframes entrada {
+    0% { opacity: 0%; bottom: 50px}
+    100% {opacity: 100%; bottom: 0px;}
+}
+
+@keyframes opacidad {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@mixin entrada ($duration){
+    animation-name: entrada;
+    animation-duration: $duration;
+    position: relative;
+}
+
+// páginas específicas 
+// inicio 
+@mixin display ($p, $d) { /*display y position para sublista*/
+    position: $p;
+    display: $d;
+}
+
+// pasos
+@mixin size-font ($num){
+    font-size: $size *$num;
+}
+
+@mixin cuadrados ($color){
+    background-color:($color);
+    display: inline;
+    float: left;
+}

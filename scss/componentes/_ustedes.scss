@@ -1,0 +1,33 @@
+#ustedes {
+    background-color: nth($colores, 3);
+
+    h2 {
+        @include h-text (7, white);
+        @include sticky (30%);
+        padding-bottom: 30px;
+    }
+
+    .conteiners {
+        @include flex (column, space-between);
+        flex-wrap: wrap;
+        padding: 40px 0;
+
+        div {
+            display: block;
+            @include sticky (50%);
+            text-align: left;
+            border-radius: 15px;
+            background-color: white;
+
+            .comillas {
+                padding: 50px 50px 0 50px;
+                font-size: $size *8;
+            }
+
+            p {
+                font-size: $size *2;
+                padding: 0px 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.boton {
+    background-color: white;
+    @include tamaño ($size *20, $size *4.5);
+    border-radius: 4rem;
+    border: none;
+    margin: 2rem 0 3rem ;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(0.9);
+        background-color: rgb(230, 230, 230);
+    }
+
+    a {
+        text-decoration: none;    
+        color: nth($colores, 2);
+        font-size: $size *2;
+
+        &:hover {
+            color: nth($colores, 3);
+        }
+    }
+}

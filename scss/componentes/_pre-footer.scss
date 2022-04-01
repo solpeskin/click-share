@@ -1,0 +1,19 @@
+#pre-footer {
+    @include background (block, "../src/fotos/fondo-pre-footer.webp" );
+    padding: 250px 0px;
+
+    .item-pf {
+        @include flex (column, center);
+        
+        h2 {
+            display: inline;
+            @include h-text (6, white);
+        }
+
+        button {
+            margin:0 auto;
+            display: inline;
+        }
+    }
+    
+}

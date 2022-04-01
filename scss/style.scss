@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Questrial', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+// variables 
+@import "variables";
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Questrial&display=swap');
+
+// páginas
+@import "componentes/inicio";
+@import "componentes/botones";
+@import "componentes/pasos";
+@import "componentes/ustedes";
+@import "componentes/nosotros";
+@import "componentes/pre-footer";
+@import "componentes/footer";
+
+// iniciar sesión y registrarse 
+@import "componentes/pags/iniciar-sesion";
+
+// media query 
+@import "media-query/mobile";
+@import "media-query/compu";
+@import "media-query/ipad";
+@import "media-query/submenu";
+@import "media-query/footer-responsive";
+
+// footer páginas 
+@import "componentes/footer-pags/centro";
+@import "componentes/footer-pags/tutoriales";
+@import "componentes/footer-pags/privacidad"

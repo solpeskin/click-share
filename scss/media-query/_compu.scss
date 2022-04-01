@@ -1,0 +1,100 @@
+@media screen and (min-width: 961px) {
+    
+    header {
+        .menu {
+            .list-mobile {
+                display: none;
+            }
+
+            .con-fondo, .sin-fondo {
+                display: inline-block;
+                border-radius: $size *4 ;
+                @include tamaño ($size *15, $size *4.5);
+                margin: $size *0.2
+            }
+
+            /*botones*/
+            .boton1 {
+                border: black solid 2px;
+            }
+    
+            .boton2 {
+                background-color: black;
+    
+                a{
+                color: white;
+                }
+            }
+        }
+    }
+
+    #pasos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        div {
+            @include tamaño (33.3%, 368.8px);
+            @include sticky (53.5%);
+            flex-wrap: wrap;
+            
+            @media screen and (max-width: 1140px) {
+                h5 {
+                    font-size: $size *3;  
+                } 
+            }
+        }  
+
+        .cuadrado4 {
+            margin: 0px 33.3%;
+        }
+    }
+
+    #ustedes {
+        .conteiners {
+            padding: 40px;
+
+            div {
+                @include sticky (50%);
+                width: 30%;
+            }
+
+            .conteiner1 {
+                margin-top: 700px;
+            }
+            .conteiner2 {
+                margin: auto;
+            }
+            .conteiner3 {
+                margin-left: 70%;
+            }
+        }
+    }
+
+    footer {
+        display: grid;
+        grid-template-rows: 100px;
+        grid-template-columns: repeat(2, 50%);
+        grid-gap: 30px;
+        padding: 70px;
+
+        .texts div {
+            text-align: start;
+        }
+    }
+
+    .preguntas-destacadas {
+        
+        .todas-pregs {
+            @include flex (row !important, center) ;
+        }
+
+    }
+
+    // tutoriales 
+    .body-tuto {
+        .tutoriales .texto-explicacion{
+            margin: 100px 90px;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.centro-ayuda {
+
+    .busqueda {
+        @include background (static, "../src/fotos/loros.jpeg");
+        background-attachment: fixed;
+        padding: 130px 0;
+
+        h4 {
+            @include h-text (6, white);
+            @include entrada (1s);
+        }
+
+        .buscar {
+            text-align: center;
+
+            input {
+                @include tamaño (500px,40px);
+                @include espacios (50px 20px, 0 10px);
+                @include entrada (1.5s);
+                border: white;
+            } 
+
+            button {
+                height: 40px;
+                background:none;
+                border: none;
+                fill: white;
+                transition: all 0.5s;
+                @include entrada (1.5s);
+
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }   
+    }
+
+    .preguntas-destacadas {
+        padding: 50px 0 10vh 0;
+        h5 {
+            @include h-text (3, black);
+            margin: 30px;
+        }
+
+        .todas-pregs {
+            @include flex (column, center);
+
+            .preguntas {
+                @include flex (column, initial);
+
+                div {
+                    
+                    border-radius: 20px;
+                    @include espacios (10px, 20px);
+                    @include tamaño (470px, 80px);
+                    @extend %box-shadow;
+                    transition: all 0.8s ease; 
+                    cursor: pointer;
+
+                    p {
+                        margin-bottom: 10px;
+                        line-height: 25px;
+                    }
+
+                    &:hover {
+                        height: 200px
+                    }
+                    
+                    &:hover .ans{
+                        @include animaciones (animacion-ans, 1s);
+                        @keyframes animacion-ans {
+                            0% {opacity: 0; }
+                            30% {opacity: 0; }
+                            100% {opacity: 100; }
+                        }
+                        
+                        opacity: 100;
+                    }
+
+                    .ans {
+                        transition: all 0.2s ease-in;
+                        opacity: 0;
+                    }
+                }   
+            }
+        }
+        
+    }
+
+    // cambio colores del footer 
+    footer {
+        .mandar {
+            background-color: rgb(100, 223, 131) !important;
+        }
+
+        h5, ul li a:hover {
+            color: rgb(100, 223, 131) !important;
+        }
+    }
+}
+
+.house {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.4);
+    }
+}
+

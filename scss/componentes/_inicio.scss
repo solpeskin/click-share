@@ -1,0 +1,103 @@
+
+#inicio {
+    width: 100%;
+    padding: 10%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+    /*fondo*/
+    @include background (block, "../src/fotos/neon.webp" );
+    background-attachment: fixed;
+
+    animation-name: opacidad;
+    animation-duration: 1s;
+
+    /*textos*/
+    h1 {
+        padding-top: 100px;
+        @include h-text (10, white);
+        word-wrap:break-word;
+    }
+
+    h4 {
+        font-size: $size *1.7; 
+    }
+}
+
+header {
+    @include espacios(0 0 20px 0,20px );
+    @include sticky (0%);
+    
+    z-index: 4;
+    background-color: white;
+
+    .menu {
+        li {
+            list-style: none;
+        }
+
+        .items-menu {
+            @include flex (row, space-around);
+            flex-wrap: wrap;
+    
+            .boton2, .boton1, svg {
+                transition: all 0.3s;
+    
+                &:hover {
+                    transform: scale(0.9);
+                }
+            }
+    
+            .negro a, .negro:hover a {
+                color: black;
+            }
+    
+            .con-fondo:hover, .sublista li:hover {
+                background-color: rgba(180, 180, 180, 0.171);
+            }
+    
+            li {
+                @extend %text-decoration;
+                @include display(inline-block, relative);
+                padding-top: 7px;
+    
+                &:hover ul {
+                    display: block;
+                }
+    
+                a {
+                    font-size: $size *2;
+                    text-decoration: none
+                }
+    
+                svg {
+                    @extend %text-decoration ;
+                    padding-top: 7px;
+    
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+    
+                /*sublista*/
+                .sublista {
+                    @include display(absolute, none);
+                    @include espacios (6px 0 0 0, 0px);
+                    width: 150px;
+                    text-align: start;
+                    background-color: white;
+    
+                    li {
+                        font-size: $size *2;
+                        padding: $size;
+                        width: 100%;
+                        color: black;
+                    }
+                }  
+        
+            } 
+        }
+    }
+
+}
+

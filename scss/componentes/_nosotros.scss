@@ -1,0 +1,14 @@
+#nosotros {
+    text-align: start;
+    color: black;
+    padding: 100px;
+
+    p {
+        font-size: $size *2;
+        padding-top: 30px;
+    }
+
+    h5 {
+        font-size: $size *4;
+    }
+}

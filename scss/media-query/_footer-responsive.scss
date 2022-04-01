@@ -1,0 +1,61 @@
+// footer para el responsive mobil, ipad y un poco de compu (a partir de 1080 width)
+@media screen and (max-width: 1080px){
+
+    %Column {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer {
+        @extend %Column;
+
+        .comments {
+            order: 2;
+            margin-bottom: 30px;
+
+            h4 {
+                text-align: center
+            }
+
+            .enviar label{
+                @extend %Column;
+
+                .comentarios, .mandar{
+                    margin: 10px auto
+                }
+
+                .comentarios {
+                    width: 250px;
+                }
+                
+            }
+            
+        }
+
+        .texts {
+            @extend %Column;
+            order: 1;
+            margin: 30px 0;
+
+            div {
+                margin: 20px auto;
+                text-align: center;
+
+                ul {
+                    padding: 0px;
+                }
+            }
+
+            .redes {
+                .ic-mobile {
+                    display: inline;
+                    margin: 0px 10px;
+                }
+
+                .ic-compu {
+                    display: none;
+                }
+            }
+        }
+    }
+}
