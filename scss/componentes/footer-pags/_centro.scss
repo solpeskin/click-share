@@ -1,12 +1,13 @@
 .centro-ayuda {
 
     .busqueda {
-        @include background (static, "../src/fotos/loros.jpeg");
+        // @include background (static, "../src/fotos/loros.jpeg");
+        background-color: rgb(0, 0, 0);
         background-attachment: fixed;
         padding: 130px 0;
 
         h4 {
-            @include h-text (6, white);
+            @include h-text (6, rgb(255, 255, 255));
             @include entrada (1s);
         }
 
@@ -17,14 +18,14 @@
                 @include tamaño (500px,40px);
                 @include espacios (50px 20px, 0 10px);
                 @include entrada (1.5s);
-                border: white;
+                border: solid rgb(255, 0, 157) 1.5px;
             } 
 
             button {
                 height: 40px;
                 background:none;
                 border: none;
-                fill: white;
+                fill: rgb(255, 255, 255);
                 transition: all 0.5s;
                 @include entrada (1.5s);
 
@@ -37,8 +38,10 @@
 
     .preguntas-destacadas {
         padding: 50px 0 10vh 0;
+        background-color: rgb(255, 255, 255);
+        
         h5 {
-            @include h-text (3, black);
+            @include h-text (3, rgb(0, 0, 0));
             margin: 30px;
         }
 
@@ -77,6 +80,7 @@
                         opacity: 100;
                     }
 
+
                     .ans {
                         transition: all 0.2s ease-in;
                         opacity: 0;
@@ -88,15 +92,15 @@
     }
 
     // cambio colores del footer 
-    footer {
-        .mandar {
-            background-color: rgb(100, 223, 131) !important;
-        }
+    // footer {
+    //     .mandar {
+    //         background-color: rgb(100, 223, 131) !important;
+    //     }
 
-        h5, ul li a:hover {
-            color: rgb(100, 223, 131) !important;
-        }
-    }
+    //     h5, ul li a:hover {
+    //         color: rgb(100, 223, 131) !important;
+    //     }
+    // }
 }
 
 .house {

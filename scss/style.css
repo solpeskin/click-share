@@ -1072,10 +1072,7 @@ footer .texts div ul .ic-mobile {
 }
 
 .centro-ayuda .busqueda {
-  display: static;
-  background-size: cover;
-  background-image: url("../src/fotos/loros.jpeg");
-  background-repeat: no-repeat;
+  background-color: black;
   background-attachment: fixed;
   padding: 130px 0;
 }
@@ -1105,7 +1102,7 @@ footer .texts div ul .ic-mobile {
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   position: relative;
-  border: white;
+  border: solid #ff009d 1.5px;
 }
 
 .centro-ayuda .busqueda .buscar button {
@@ -1129,6 +1126,7 @@ footer .texts div ul .ic-mobile {
 
 .centro-ayuda .preguntas-destacadas {
   padding: 50px 0 10vh 0;
+  background-color: white;
 }
 
 .centro-ayuda .preguntas-destacadas h5 {
@@ -1220,14 +1218,6 @@ footer .texts div ul .ic-mobile {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   opacity: 0;
-}
-
-.centro-ayuda footer .mandar {
-  background-color: #64df83 !important;
-}
-
-.centro-ayuda footer h5, .centro-ayuda footer ul li a:hover {
-  color: #64df83 !important;
 }
 
 .house {
