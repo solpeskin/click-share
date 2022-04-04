@@ -1,16 +1,3 @@
-// arrays :
-let comentariosFooter = [];
-let preguntasHechas = [];
-
-// clases
-class preguntas {
-
-    constructor (pregunta, respuesta){
-        this.pregunta = pregunta
-        this.respuesta = respuesta
-    }
-}
-
 // guardar comentarios del footer en variable
 function GuardarComentario(){
     let comentarios = document.getElementsByClassName("comentarios").value;
@@ -38,12 +25,12 @@ CrearPreguntas(
 )
 
 function Buscar(){
-    let preguntaBuscada = document.getElementsByClassName("buscarPregunta").value; /*como no me funciona, para probarlo uso el prompt*/
+    let preguntaBuscada = document.getElementsByClassName("buscarPregunta").value; /*como no me funciona el .value, para probarlo uso el prompt*/
     preguntaBuscada = prompt ("cuál pregunta");
 
     preguntasHechas.forEach((pregunta) => {
         if (pregunta.pregunta.indexOf (preguntaBuscada) !==-1){
-            console.log (pregunta.respuesta);
+            console.log (pregunta);
 
         }
     } )
