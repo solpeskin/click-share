@@ -33,7 +33,8 @@ function Buscar(){
             console.log (pregunta);
 
         }
-    } )
-
+    } );
 }
+
+
 
