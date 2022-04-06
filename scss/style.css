@@ -380,10 +380,10 @@ footer .comments .enviar label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -407,7 +407,7 @@ footer .comments .enviar label .mandar {
   background-color: #dd1070;
   color: white;
   border: none;
-  margin-left: 10px;
+  margin-bottom: 30px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -416,6 +416,12 @@ footer .comments .enviar label .mandar:hover {
   background-color: white;
   color: black;
   border: black solid 1px;
+}
+
+@media screen and (max-width: 1080px) {
+  footer .comments .enviar label .graciasComentario {
+    margin: 0 auto;
+  }
 }
 
 footer .comments h4 {

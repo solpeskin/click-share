@@ -6,7 +6,7 @@ footer {
         text-align: start;
         
         .enviar label {
-            @include flex (row, start);
+            @include flex (column, start);
             margin-top: 30px;
 
             .comentarios{
@@ -22,7 +22,7 @@ footer {
                 background-color: nth($colores, 3 );
                 color: white;
                 border: none;
-                margin-left: 10px;
+                margin-bottom: 30px;
                 transition: all 0.5s;
 
 
@@ -30,6 +30,12 @@ footer {
                     background-color: white;
                     color: black;
                     border: black solid 1px;
+                }
+            }
+
+            .graciasComentario {
+                @media screen and (max-width: 1080px){
+                    margin: 0 auto;
                 }
             }
         }

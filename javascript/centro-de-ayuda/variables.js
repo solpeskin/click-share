@@ -1,6 +1,9 @@
-// arrays :
-let comentariosFooter = [];
-let preguntasHechas = [];
+// variables :
+let preguntasHechas = [
+    {pregunta: "¿Cómo uso la app?", respuesta: "la app la usas usándola" }
+];
+
+
 
 // clases
 class preguntas {
