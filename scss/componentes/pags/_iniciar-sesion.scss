@@ -62,23 +62,34 @@
             margin: 10px 0 ;
     
             .escribir {
-                border: solid #000000 1px;
-                background-color: white;
+                border: none;
+                border-bottom: solid #000000 1px;
+                outline: 0px;
                 text-align: start;
                 @include tamaño (350px, 40px);
                 font-size: $size *1.5;
                 padding: 10px;
+                background: none;
     
                 @media screen and (max-width: 500px){
                     @include tamaño (250px, 40px);
                 }
             }
 
-            .ingresaEstilo {
+            ::placeholder{
+                color: rgb(175, 175, 175);
+            }
+
+            .submitError {
                 font-size: 15px;
                 text-align: start;
                 color: rgb(255, 0, 98);
-                margin: 0px 0;
+                margin-top: 10px;
+                width: 350px;
+
+                @media screen and (max-width: 500px){
+                    width: 250px;
+                }
             }
         }
 

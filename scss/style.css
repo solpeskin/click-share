@@ -564,13 +564,15 @@ footer .texts div ul .ic-mobile {
 }
 
 .is .form label .escribir {
-  border: solid #000000 1px;
-  background-color: white;
+  border: none;
+  border-bottom: solid #000000 1px;
+  outline: 0px;
   text-align: start;
   width: 350px;
   height: 40px;
   font-size: 15px;
   padding: 10px;
+  background: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -580,11 +582,34 @@ footer .texts div ul .ic-mobile {
   }
 }
 
-.is .form label .ingresaEstilo {
+.is .form label ::-webkit-input-placeholder {
+  color: #afafaf;
+}
+
+.is .form label :-ms-input-placeholder {
+  color: #afafaf;
+}
+
+.is .form label ::-ms-input-placeholder {
+  color: #afafaf;
+}
+
+.is .form label ::placeholder {
+  color: #afafaf;
+}
+
+.is .form label .submitError {
   font-size: 15px;
   text-align: start;
   color: #ff0062;
-  margin: 0px 0;
+  margin-top: 10px;
+  width: 350px;
+}
+
+@media screen and (max-width: 500px) {
+  .is .form label .submitError {
+    width: 250px;
+  }
 }
 
 .is .form .registrarSubmit {
