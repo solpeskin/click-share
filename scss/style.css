@@ -559,11 +559,11 @@ footer .texts div ul .ic-mobile {
   margin: auto;
 }
 
-.is .form input {
-  margin: 10px 0 20px 0;
+.is .form label {
+  margin: 10px 0;
 }
 
-.is .form .escribir {
+.is .form label .escribir {
   border: solid #000000 1px;
   background-color: white;
   text-align: start;
@@ -574,10 +574,22 @@ footer .texts div ul .ic-mobile {
 }
 
 @media screen and (max-width: 500px) {
-  .is .form .escribir {
+  .is .form label .escribir {
     width: 250px;
     height: 40px;
   }
+}
+
+.is .form label .ingresaEstilo {
+  font-size: 15px;
+  text-align: start;
+  color: #ff0062;
+  margin: 0px 0;
+}
+
+.is .form .registrarSubmit {
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .r {
@@ -585,7 +597,7 @@ footer .texts div ul .ic-mobile {
 }
 
 .r .conteinerCompu {
-  height: 500px;
+  height: auto;
 }
 
 .boton {

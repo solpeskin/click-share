@@ -58,21 +58,33 @@
         align-items: center;
         margin: auto;
 
-        input {
-            margin: 10px 0 20px 0;
+        label {
+            margin: 10px 0 ;
+    
+            .escribir {
+                border: solid #000000 1px;
+                background-color: white;
+                text-align: start;
+                @include tamaño (350px, 40px);
+                font-size: $size *1.5;
+                padding: 10px;
+    
+                @media screen and (max-width: 500px){
+                    @include tamaño (250px, 40px);
+                }
+            }
+
+            .ingresaEstilo {
+                font-size: 15px;
+                text-align: start;
+                color: rgb(255, 0, 98);
+                margin: 0px 0;
+            }
         }
 
-        .escribir {
-            border: solid #000000 1px;
-            background-color: white;
-            text-align: start;
-            @include tamaño (350px, 40px);
-            font-size: $size *1.5;
-            padding: 10px;
-
-            @media screen and (max-width: 500px){
-                @include tamaño (250px, 40px);
-            }
+        .registrarSubmit {
+            margin: 0;
+            margin-bottom: 40px;
         }
     }
 }
@@ -82,7 +94,7 @@
     margin: 0px;
 
     .conteinerCompu {
-        height: 500px;
+        height: auto ;
     }
 }
 
