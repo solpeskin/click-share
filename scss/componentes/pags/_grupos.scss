@@ -1,0 +1,72 @@
+#gruposBody{
+    background-color: rgb(250, 250, 250);
+
+    header, .perfilYnombre {
+        @include flex (row, space-between);
+        height: 100px;
+        align-items: center;
+        border-bottom: 1px solid gray;
+
+        .buscarDiv {
+            position: relative;
+            width: 450px;
+
+            #buscadorGrupos {
+                @include tamaño (450px, 50px);
+                background-color: rgba(193, 200, 206, 0.247);
+                outline: none;
+                border: none;
+                border-radius: 2px;
+                padding-left: 10px;
+            }
+
+            .icono-search {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+            }
+        }
+
+        .perfil {
+            margin-right: 30px;
+    
+        }
+    }
+}
+
+#perfilOptions {
+    display: inline-block;
+    position: absolute;
+    left: 86%;
+    top: 99px;
+    background-color: white;
+    height: 100vh;
+    border-left: 1px solid gray;
+
+    ul {
+        list-style: none;
+        text-align: end;
+
+        li {
+            margin: 30px;
+        }
+    }
+}
+
+#grupos {
+    .nuevoGrupo {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+    }
+
+}
+
+.animacionGrupos{
+    transition: all 0.3s;
+
+   &:hover{
+       transform: scale(1.2);
+   }
+}

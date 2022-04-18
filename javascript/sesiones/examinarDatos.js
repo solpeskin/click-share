@@ -1,33 +1,5 @@
-// declaro todas las variables 
-const form = document.querySelector("form");
-const mail = document.querySelector(".mail");
-const username = document.querySelector(".nombre");
-const contra = document.querySelector(".contrasena");
-const confirmacion = document.querySelector(".confirmacion");
-
-let correcciones = "";
-let Cuser = 1;
-let Cmail = 1;
-let Ccontra = 1;
-let Cconfirmacion = 1;
-
-class user {
-    constructor(mail,username,contrasena){
-        this.mail = mail;
-        this.username = username;
-        this.contraseña = contrasena;
-    }
-}
-
-function submitError (input, message) {
-    input.innerHTML = message;
-    input.addEventListener("input", ()=> examinarDatos())
-}
-
-function submitNoError (input) {
-    input.innerHTML = "";
-}
-
+// funciones
+// examinar datos
 function examinarDatos (){
     datoUsuario()
     datoMail()
@@ -35,9 +7,10 @@ function examinarDatos (){
     confirmarContra()
 }
 
+// examinar datos del usuario
 function datoUsuario(){
     let textoErrorUser = username.parentElement.querySelector(".submitError");
-    submitNoError(textoErrorUser)
+    submitNoError(textoErrorUser);
 
     // si es mas grande que 10
     if (username.value.length >10 || username.value.length <4) {
@@ -56,6 +29,7 @@ function datoUsuario(){
     }
 }
 
+// examinar datos mail
 function datoMail(){
     let textoErrorMail = mail.parentElement.querySelector(".submitError");
     submitNoError(textoErrorMail);
@@ -73,6 +47,7 @@ function datoMail(){
     }
 }
 
+// examinar datos contraseña
 function datoContra(){
     let textoErrorContra = contra.parentElement.querySelector(".submitError");
     submitNoError(textoErrorContra);
@@ -88,12 +63,13 @@ function datoContra(){
     }
 
     // si esta vacío
-    if (contra.value == ""){
+    if (!contra.value){
         submitError(textoErrorContra, "Ingrese una contraseña.");
         Ccontra = 0;
     }    
 }
 
+// examinar que la confirmación sea iagual a la contra
 function confirmarContra(){
     let textoErrorConfirmacion = confirmacion.parentElement.querySelector(".submitError");
     submitNoError(textoErrorConfirmacion);
@@ -115,13 +91,9 @@ function confirmarContra(){
     }  
 }
 
-function crearUser (){
-    if (Cuser + Cmail + Ccontra + Cconfirmacion === 4){
-        let usuario = new user (mail.value, username.value, contra.value);
-        console.log (usuario);
-    }
-}
 
+
+// al hacer cliick
 form.addEventListener("submit", (event)=>{
     event.preventDefault();
     examinarDatos();
