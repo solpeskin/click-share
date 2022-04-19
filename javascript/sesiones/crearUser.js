@@ -6,6 +6,8 @@ function crearUser (){
 
         usuarios.push(usuario);
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        window.location.assign ("iniciar-sesion.html");
     }
 }
 
