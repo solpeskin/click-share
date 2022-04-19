@@ -12,9 +12,9 @@ function datoUsuario(){
     let textoErrorUser = username.parentElement.querySelector(".submitError");
     submitNoError(textoErrorUser);
 
-    // si es mas grande que 10
-    if (username.value.length >10 || username.value.length <4) {
-        submitError(textoErrorUser, "Tu nombre de usuario debe ser de entre 4 y 10 caracteres.")
+    // si es mas grande que 15
+    if (username.value.length >15 || username.value.length <4) {
+        submitError(textoErrorUser, "Tu nombre de usuario debe ser de entre 4 y 15 caracteres.")
         Cuser = 0;
     }
 

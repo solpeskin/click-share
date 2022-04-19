@@ -21,7 +21,7 @@ function registrar(event){
 
 function iniciarSesion(event){
     // variables 
-    const userFound = UsuarioDisponible();
+    const userFound = UsuarioDisponible() || mailDisponible;
     let textoErrorUser = username.parentElement.querySelector(".submitError");
     let textoErrorContra = contra.parentElement.querySelector(".submitError");
 
@@ -32,7 +32,6 @@ function iniciarSesion(event){
 
     document.querySelectorAll(".escribir").forEach((e)=> {
         e.addEventListener("input", ()=> {
-            submitNoError(textoErrorUser)
             submitNoError(textoErrorContra)
         });
     })
@@ -60,6 +59,6 @@ function contraLogIn (userFound, textoErrorContra){
     }
 
     else {
-        submitError(textoErrorContra, "La contraseña no coincide.")
+        submitError(textoErrorContra, "La contraseña no es correcta.")
     }
 }
