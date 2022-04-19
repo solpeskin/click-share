@@ -1,5 +1,5 @@
 // funciones
-// examinar datos
+// examinar datos registro
 function examinarDatos (){
     datoUsuario()
     datoMail()
@@ -18,14 +18,18 @@ function datoUsuario(){
         Cuser = 0;
     }
 
+    else if (UsuarioDisponible()){
+        submitError(textoErrorUser, "Nombre de usuario no disponible.")
+        Cuser = 0;
+    }
+
     else {
-        Cuser = 1;
+        Cuser=1;
     }
 
     // si esta vacío
-    if (username.value == ""){
-        submitError(textoErrorUser, "Ingrese un nombre de usuario.")
-        Cuser = 0;
+    if (!username.value){
+        submitError(textoErrorUser, "Ingrese un nombre de usuario.");  
     }
 }
 
@@ -34,12 +38,14 @@ function datoMail(){
     let textoErrorMail = mail.parentElement.querySelector(".submitError");
     submitNoError(textoErrorMail);
 
-    // tendría que verificar que el mail exista pero todavía no se hacer eso
-
     // si esta vacío
-    if (mail.value == ""){
+    if (!mail.value){
         submitError(textoErrorMail, "Ingrese un correo electrónico.");
         Cmail = 0;
+    } 
+
+    else if (mailDisponible()){
+        submitError(textoErrorMail, "El mail ingresado ya fue utilizado.")
     }
 
     else {
@@ -54,8 +60,7 @@ function datoContra(){
 
     // si es mas chico que 6
     if (contra.value.length <6){
-        submitError(textoErrorContra, "Tu contraseña debe ser de al menos 6 caracteres.")
-        Ccontra = 0;
+        submitError(textoErrorContra, "Tu contraseña debe ser de al menos 6 caracteres.");
     }
 
     else {
@@ -64,9 +69,8 @@ function datoContra(){
 
     // si esta vacío
     if (!contra.value){
-        submitError(textoErrorContra, "Ingrese una contraseña.");
-        Ccontra = 0;
-    }    
+        submitError(textoErrorContra, "Ingrese una contraseña.");  
+    }
 }
 
 // examinar que la confirmación sea iagual a la contra
@@ -85,22 +89,7 @@ function confirmarContra(){
     }
 
     // si esta vacío
-    if (confirmacion.value == ""){
-        submitError(textoErrorConfirmacion, "Debe confirmar su contraseña.");
-        Cconfirmacion = 0;
-    }  
-}
-
-
-
-// al hacer cliick
-form.addEventListener("submit", (event)=>{
-    event.preventDefault();
-    examinarDatos();
-    crearUser();
-
-    // pasa con el primer submit
-    document.querySelectorAll(".escribir").forEach((e)=> {
-        e.addEventListener("input", ()=> examinarDatos());
-    })
-});
+    if (!confirmacion.value){
+        submitError(textoErrorConfirmacion, "Debe confirmar su contraseña.");  
+    }
+}    
