@@ -553,7 +553,7 @@ footer .texts div ul .ic-mobile {
   display: inline-block;
   border-radius: 40px;
   width: 500px;
-  height: 400px;
+  height: auto;
   -webkit-animation-name: entrada;
           animation-name: entrada;
   -webkit-animation-duration: 1.8s;
@@ -561,6 +561,7 @@ footer .texts div ul .ic-mobile {
   position: relative;
   -webkit-box-shadow: 4px 10px 25px rgba(0, 0, 0, 0.15);
           box-shadow: 4px 10px 25px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
 }
 
 .is h1 {
@@ -680,7 +681,6 @@ footer .texts div ul .ic-mobile {
 
 .is .form .registrarSubmit {
   margin: 0;
-  margin-bottom: 40px;
 }
 
 .r {
@@ -1082,29 +1082,27 @@ footer .texts div ul .ic-mobile {
 
 @media screen and (max-width: 961px) {
   header .menu-mobile {
-    padding: 0px;
-    display: inline-block;
-    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  header .menu-mobile:hover .items-menu {
-    display: block;
+  header .menu-mobile svg {
+    display: inline;
   }
-  header .menu-mobile .items-menu {
-    position: absolute;
-    display: none;
+  header .menu-mobile div {
     background-color: white;
-    height: 100vh;
+    display: none;
+    position: absolute;
+    left: 0px;
     width: 200px;
-    padding: 0px;
-    left: -20px;
+    height: 100vh;
   }
-  header .menu-mobile .items-menu li {
-    text-align: start;
-    display: block;
-    padding: 10px;
-  }
-  header .menu-mobile .items-menu li a {
-    color: black;
+  header .menu-mobile:hover div {
+    display: inline;
   }
 }
 

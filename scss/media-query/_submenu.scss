@@ -2,32 +2,23 @@
 @media screen and (max-width: 961px){
     header {
         .menu-mobile {
-            padding: 0px;
-            display: inline-block;
-            position:relative;
-
-            &:hover .items-menu {
-                display: block; 
-            }
+            display: inline-flex;
+            flex-direction: column;
             
-            .items-menu {
-                position: absolute;
-                display: none;
+            svg {
+                display: inline;
+            }
+    
+            div {
                 background-color: white;
-                height: 100vh;
-                width: 200px;
-                padding: 0px;
-                left: -20px;
-
-                li {
-                    text-align: start;
-                    display: block;
-                    padding: 10px;
-                    
-                    a {
-                        color: black;
-                    }
-                }
+                display: none;
+                position: absolute;
+                left: 0px;
+                @include tamaño (200px, 100vh)
+            }
+    
+            &:hover div {
+                display: inline;  
             }
         }
     }

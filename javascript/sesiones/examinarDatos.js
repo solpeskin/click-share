@@ -18,7 +18,7 @@ function datoUsuario(){
         Cuser = 0;
     }
 
-    else if (UsuarioDisponible()){
+    else if (searchUser()){
         submitError(textoErrorUser, "Nombre de usuario no disponible.")
         Cuser = 0;
     }
@@ -44,7 +44,7 @@ function datoMail(){
         Cmail = 0;
     } 
 
-    else if (mailDisponible()){
+    else if (searchMail()){
         submitError(textoErrorMail, "El mail ingresado ya fue utilizado.")
     }
 

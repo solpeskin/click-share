@@ -12,9 +12,11 @@
         display: inline-block;
         border-radius: 40px;
 
-        @include tamaño (500px, 400px);
+        @include tamaño (500px, auto );
         @include entrada (1.8s);
         box-shadow: 4px 10px 25px rgba(0,0,0,.15);
+
+        margin-bottom: 10px;
     }
 
     h1{
@@ -95,7 +97,6 @@
 
         .registrarSubmit {
             margin: 0;
-            margin-bottom: 40px;
         }
     }
 }

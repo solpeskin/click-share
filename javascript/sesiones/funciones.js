@@ -1,10 +1,10 @@
 // dispoibles ? 
-function UsuarioDisponible (){
-    return usuarios.find((user) => user?.username === username.value);
+function searchUser (){
+    return usuarios.find((user) => user?.username === username?.value);
 }
 
-function mailDisponible (){
-    return usuarios.find((user) => user?.mail === mail.value);
+function searchMail (){
+    return usuarios.find((user) => user?.mail === mail?.value);
 }
 
 // al hacer cliick registrar
@@ -20,21 +20,24 @@ function registrar(event){
 };
 
 function iniciarSesion(event){
-    // variables 
-    const userFound = UsuarioDisponible() || mailDisponible;
-    let textoErrorUser = username.parentElement.querySelector(".submitError");
-    let textoErrorContra = contra.parentElement.querySelector(".submitError");
-
     event.preventDefault();
-
-    usuarioLogIn(userFound, textoErrorUser)
-    contraLogIn(userFound, textoErrorContra)
+    examinarLogIn();
 
     document.querySelectorAll(".escribir").forEach((e)=> {
         e.addEventListener("input", ()=> {
-            submitNoError(textoErrorContra)
+            examinarLogIn();
         });
     })
+}
+
+function examinarLogIn () {
+    // variables 
+    const userFound = searchUser() || searchMail();
+    let textoErrorUser = username.parentElement.querySelector(".submitError");
+    let textoErrorContra = contra.parentElement.querySelector(".submitError");
+    
+    usuarioLogIn(userFound, textoErrorUser)
+    contraLogIn(userFound, textoErrorContra)
 }
 
 // examinar usuario ingresado en login 
@@ -46,6 +49,10 @@ function usuarioLogIn (userFound, textoErrorUser){
     else if (!userFound){
         submitError(textoErrorUser, "Nombre de usuario no existe.")
     }
+
+    else {
+        submitNoError(textoErrorUser)
+    }
 }
 
 // examinar contraseña login 
@@ -56,6 +63,8 @@ function contraLogIn (userFound, textoErrorContra){
 
     else if (userFound?.contraseña === contra.value){
         console.log ("ingreso exitoso")
+        submitNoError(textoErrorContra)
+        currentUser = userFound;
     }
 
     else {
