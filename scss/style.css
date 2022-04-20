@@ -1565,7 +1565,7 @@ footer .texts div ul .ic-mobile {
           transform: scale(1.2);
 }
 
-h1, h2, h3, h4, h5, h6, p, a, input, li, .comentarios {
+h1, h2, h3, h4, h5, h6, p, a, input, li, .comentarios, #pregunta {
   font-family: "Raleway", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
