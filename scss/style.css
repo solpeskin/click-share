@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:ital,wght@0,200;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -84,6 +84,10 @@
   font-size: 17px;
 }
 
+#inicio h1, #inicio h4 {
+  font-family: "Raleway", sans-serif;
+}
+
 header {
   margin: 0 0 20px 0;
   padding: 25px 20px;
@@ -115,6 +119,7 @@ header nav {
 header nav a {
   color: black;
   text-decoration: none;
+  font-family: "Raleway", sans-serif;
 }
 
 header nav a:hover {
@@ -176,6 +181,7 @@ header nav .menu-paginas .items-menu li {
   border-radius: 4px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  font-family: "Raleway", sans-serif;
 }
 
 header nav .menu-paginas .items-menu li:hover {
@@ -242,6 +248,7 @@ header nav .espacio {
   text-decoration: none;
   color: #cf4f87;
   font-size: 20px;
+  font-family: "Raleway", sans-serif;
 }
 
 .boton a:hover {
@@ -260,6 +267,7 @@ header nav .espacio {
   position: -webkit-sticky;
   position: sticky;
   top: 23%;
+  font-family: "Raleway", sans-serif;
 }
 
 #pasos div {
@@ -270,6 +278,7 @@ header nav .espacio {
   font-size: 15px;
   padding: 30px 30px 0px 30px;
   color: white;
+  font-family: "Raleway", sans-serif;
 }
 
 #pasos div h5 {
@@ -322,6 +331,7 @@ header nav .espacio {
   position: sticky;
   top: 30%;
   padding-bottom: 30px;
+  font-family: "Raleway", sans-serif;
 }
 
 #ustedes .conteiners {
@@ -358,6 +368,7 @@ header nav .espacio {
 #ustedes .conteiners div p {
   font-size: 20px;
   padding: 0px 40px;
+  font-family: "Raleway", sans-serif;
 }
 
 #nosotros {
@@ -372,10 +383,13 @@ header nav .espacio {
 #nosotros p {
   font-size: 15px;
   padding-top: 30px;
+  font-family: "Raleway", sans-serif;
 }
 
 #nosotros h5 {
   font-size: 25px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 
 #nosotros .botonNosotros {
@@ -390,6 +404,7 @@ header nav .espacio {
 #nosotros .botonNosotros a {
   color: black;
   text-decoration: none;
+  font-family: "Raleway", sans-serif;
 }
 
 #nosotros .botonNosotros:hover {
@@ -426,6 +441,7 @@ header nav .espacio {
   font-size: 60px;
   text-align: center;
   color: white;
+  font-family: "Raleway", sans-serif;
 }
 
 #pre-footer .item-pf button {
@@ -540,6 +556,10 @@ footer .texts div ul h5 {
 
 footer .texts div ul .ic-mobile {
   display: none;
+}
+
+footer h5, footer h4, footer a, footer input, footer p {
+  font-family: "Raleway", sans-serif;
 }
 
 .is {

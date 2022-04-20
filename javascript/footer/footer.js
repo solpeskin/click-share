@@ -2,6 +2,7 @@
 let comentariosPublicados = localStorage.getItem("comentarios");
 let comentariosFooter = [comentariosPublicados];
 
+pickLink ()
 document.querySelector(".mandar").addEventListener("click", ()=> mandar() );
 
 function mandar() {

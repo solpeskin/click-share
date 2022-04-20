@@ -8,6 +8,7 @@
         h2 {
             display: inline;
             @include h-text (6, white);
+            font-family: $font3;
         }
 
         button {

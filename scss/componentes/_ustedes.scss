@@ -5,6 +5,7 @@
         @include h-text (7, white);
         @include sticky (30%);
         padding-bottom: 30px;
+        font-family: $font3;
     }
 
     .conteiners {
@@ -27,6 +28,7 @@
             p {
                 font-size: $size *2;
                 padding: 0px 40px;
+                font-family: $font3;
             }
         }
     }
