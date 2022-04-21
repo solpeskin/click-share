@@ -8,17 +8,70 @@
             svg {
                 display: inline;
             }
-    
-            div {
+
+            .allMenu {
                 background-color: white;
-                display: none;
-                position: absolute;
-                left: 0px;
-                @include tamaño (200px, 100vh)
+                width: 0px;
+
+                opacity: 0%;
+                transition: all 1s ease;
+
+                div {
+                    display: none;
+                }
             }
-    
-            &:hover div {
-                display: inline;  
+
+            &:hover .allMenu{
+                opacity: 100%;
+                left: 0px;
+                position: absolute;
+                @include flex (column, start);
+                @include tamaño (200px, 100vh);
+                padding: 10px;
+
+                .clickshare {
+                    text-align: center;
+                    border-bottom: 0.5px rgb(204, 204, 204) solid;
+                    margin: 0px;
+                }
+
+                ul{
+                    width: 170px
+                }
+
+                div, div ul {
+                    @include flex (column, center);
+                    align-items: center;
+
+                    li, button {
+                        border: none;
+
+                        width: 200px;
+                        @include espacios (0, 30px 20px);
+
+                        display: inline-block;
+                        text-align: start;
+
+                        a {
+                            text-align: start;
+
+                            &:hover {
+                                color: rgb(255, 115, 201);
+                            }
+                        }
+                    } 
+
+                    ul {
+                        border-bottom: 0.5px rgb(204, 204, 204) solid;
+                        padding-bottom: 10px;
+                    }
+
+                    button {
+                        background: none;
+                        padding-bottom: 0%;
+                    }
+                }
+
             }
         }
     }

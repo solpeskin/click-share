@@ -92,7 +92,7 @@ header {
   background-color: white;
 }
 
-header nav {
+header nav div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,16 +108,16 @@ header nav {
           align-items: center;
 }
 
-header nav a {
+header nav div a {
   color: black;
   text-decoration: none;
 }
 
-header nav a:hover {
+header nav div a:hover {
   color: black;
 }
 
-header nav .menu-paginas {
+header nav div .menu-paginas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,12 +133,12 @@ header nav .menu-paginas {
           align-items: center;
 }
 
-header nav .menu-paginas .clickshare {
+header nav div .menu-paginas .clickshare {
   font-size: 30px;
   margin-right: 30px;
 }
 
-header nav .menu-paginas .items-menu {
+header nav div .menu-paginas .items-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +153,7 @@ header nav .menu-paginas .items-menu {
   margin-bottom: 0px;
 }
 
-header nav .menu-paginas .items-menu li {
+header nav div .menu-paginas .items-menu li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,46 +174,7 @@ header nav .menu-paginas .items-menu li {
   transition: all 0.2s;
 }
 
-header nav .menu-paginas .items-menu li:hover {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
-
-header nav .menu-paginas .items-menu .help {
-  text-align: start;
-  width: 30px;
-}
-
-header nav .botones {
-  text-align: end;
-}
-
-header nav .botones button {
-  width: 140px;
-  height: 45px;
-  margin: 2px;
-  border-radius: 4px;
-}
-
-header nav .botones .iniciar-sesion {
-  border: none;
-  background-color: #ff0080;
-}
-
-header nav .botones .iniciar-sesion a {
-  color: white;
-}
-
-header nav .botones .iniciar-sesion:hover {
-  background-color: #da006d;
-}
-
-header nav .botones .registrarse {
-  background: none;
-  border: 0.4px solid #1a1a1a;
-}
-
-header nav .espacio {
+header nav div .espacio {
   width: 200px;
 }
 
@@ -855,6 +816,37 @@ footer .texts div ul .ic-mobile {
   header .menu-mobile .list-mobile {
     display: none;
   }
+  header .menu-mobile li:hover {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  header .menu-mobile .help {
+    text-align: start;
+    width: 30px;
+  }
+  header .menu-mobile .botones {
+    text-align: end;
+  }
+  header .menu-mobile .botones button {
+    width: 140px;
+    height: 45px;
+    margin: 2px;
+    border-radius: 4px;
+  }
+  header .menu-mobile .botones .iniciar-sesion {
+    border: none;
+    background-color: #ff0080;
+  }
+  header .menu-mobile .botones .iniciar-sesion a {
+    color: white;
+  }
+  header .menu-mobile .botones .iniciar-sesion:hover {
+    background-color: #da006d;
+  }
+  header .menu-mobile .botones .registrarse {
+    background: none;
+    border: 0.4px solid #1a1a1a;
+  }
   #pasos {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1090,16 +1082,78 @@ footer .texts div ul .ic-mobile {
   header .menu-mobile svg {
     display: inline;
   }
-  header .menu-mobile div {
+  header .menu-mobile .allMenu {
     background-color: white;
+    width: 0px;
+    opacity: 0%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  header .menu-mobile .allMenu div {
     display: none;
-    position: absolute;
+  }
+  header .menu-mobile:hover .allMenu {
+    opacity: 100%;
     left: 0px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     width: 200px;
     height: 100vh;
+    padding: 10px;
   }
-  header .menu-mobile:hover div {
-    display: inline;
+  header .menu-mobile:hover .allMenu .clickshare {
+    text-align: center;
+    border-bottom: 0.5px #cccccc solid;
+    margin: 0px;
+  }
+  header .menu-mobile:hover .allMenu ul {
+    width: 170px;
+  }
+  header .menu-mobile:hover .allMenu div, header .menu-mobile:hover .allMenu div ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .menu-mobile:hover .allMenu div li, header .menu-mobile:hover .allMenu div button, header .menu-mobile:hover .allMenu div ul li, header .menu-mobile:hover .allMenu div ul button {
+    border: none;
+    width: 200px;
+    margin: 0;
+    padding: 30px 20px;
+    display: inline-block;
+    text-align: start;
+  }
+  header .menu-mobile:hover .allMenu div li a, header .menu-mobile:hover .allMenu div button a, header .menu-mobile:hover .allMenu div ul li a, header .menu-mobile:hover .allMenu div ul button a {
+    text-align: start;
+  }
+  header .menu-mobile:hover .allMenu div li a:hover, header .menu-mobile:hover .allMenu div button a:hover, header .menu-mobile:hover .allMenu div ul li a:hover, header .menu-mobile:hover .allMenu div ul button a:hover {
+    color: #ff73c9;
+  }
+  header .menu-mobile:hover .allMenu div ul, header .menu-mobile:hover .allMenu div ul ul {
+    border-bottom: 0.5px #cccccc solid;
+    padding-bottom: 10px;
+  }
+  header .menu-mobile:hover .allMenu div button, header .menu-mobile:hover .allMenu div ul button {
+    background: none;
+    padding-bottom: 0%;
   }
 }
 

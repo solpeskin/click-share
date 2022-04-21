@@ -6,6 +6,45 @@
                 display: none;
             }
 
+            li:hover {
+                transform:translateY(-3px);
+            }
+
+            .help {
+                text-align: start;
+                width: 30px;
+            }
+
+            .botones {
+                text-align: end;
+
+                button {
+                    @include tamaño (140px, $size *4.5);
+                    margin: $size *0.2;
+
+                    border-radius: 4px;
+                }
+
+                .iniciar-sesion {
+                    border: none;
+                    background-color: rgb(255, 0, 128);
+
+                    a {
+                        color: white;
+                    }
+
+                    &:hover {
+                        background-color: rgb(218, 0, 109);
+                    }
+                }
+
+                .registrarse {
+                    background:none;
+                    border: 0.4px solid rgb(26, 26, 26);
+
+                    
+                }
+            }
         }
     }
 
