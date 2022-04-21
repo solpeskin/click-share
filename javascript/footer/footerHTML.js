@@ -75,8 +75,7 @@ function Pfooter (){
 }
 
 function pickLink (){
-    document.getElementById("Pindex")&&Pindex()
-    if (currentPag==="footer1"||currentPag==="footer2"||currentPag==="footer3") {
-        Pfooter()
-    }
+    document.getElementById("Pindex")&&Pindex();
+    document.getElementById("Pfooter")&&Pfooter()
+
 }

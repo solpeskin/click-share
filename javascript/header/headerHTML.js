@@ -35,10 +35,8 @@ function footer (link){
 }
 
 function pickLink (){
-    currentPag==="index"&&footer(paginasIndex);
-    if (currentPag==="footer1"||currentPag==="footer2"||currentPag==="footer3") {
-        footer(paginasSrc)
-    }
+    document.getElementById("Pindex")&&footer(paginasIndex);
+    document.getElementById("Pfooter")&&footer(paginasSrc);
 }
 
 pickLink();

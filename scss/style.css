@@ -2,7 +2,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Raleway', sans-serif;
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1617,9 +1617,5 @@ footer .texts div ul .ic-mobile {
 .animacionGrupos:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-h1, h2, h3, h4, h5, h6, p, a, input, li, .comentarios, #pregunta {
-  font-family: "Raleway", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

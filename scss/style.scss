@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
@@ -39,6 +39,3 @@
 // grupos
 @import "componentes/pags/grupos";
 
-h1, h2, h3, h4, h5, h6, p, a, input, li, .comentarios, #pregunta {
-    font-family: $font3;
-}
